@@ -19,15 +19,15 @@ class BundleTextureImageLoaderTests: XCTestCase {
     }
 
     func testLoadsPNGImage() {
-        let loader = BundleTextureImageLoader(bundle: Bundle(for: type(of: self)))
+        let loader = BundleTextureImageLoader(bundle: Bundle.module)
         let loadedImage = loader.loadImageForTexture(named: "sample", scale: 1, format: .png)!
 
         XCTAssertNotNil(loadedImage)
     }
 
     func testLoadsJPGImage() {
-        let loader = BundleTextureImageLoader(bundle: Bundle(for: type(of: self)))
-        let loadedImage = loader.loadImageForTexture(named: "sample", scale: 1, format: .jpg)!
+        let loader = BundleTextureImageLoader(bundle: Bundle.module)
+        let loadedImage = loader.loadImageForTexture(named: "sample", scale: 1, format: .jpg)
 
         XCTAssertNotNil(loadedImage)
     }
