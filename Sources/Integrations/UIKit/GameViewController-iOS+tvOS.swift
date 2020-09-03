@@ -4,6 +4,7 @@
  *  See LICENSE file for license
  */
 
+#if os(iOS) || os(tvOS)
 import UIKit
 
 /**
@@ -99,3 +100,4 @@ public extension GameViewController {
         self.init(game: Game(size: .zero, scene: scene))
     }
 }
+#endif

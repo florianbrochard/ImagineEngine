@@ -4,6 +4,7 @@
  *  See LICENSE file for license
  */
 
+#if os(macOS)
 import Cocoa
 
 extension ClickGestureRecognizer {
@@ -12,3 +13,4 @@ extension ClickGestureRecognizer {
         self.action = action
     }
 }
+#endif

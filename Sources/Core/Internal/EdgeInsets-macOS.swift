@@ -4,6 +4,7 @@
  *  See LICENSE file for license
  */
 
+#if os(macOS)
 import Cocoa
 
 extension EdgeInsets: Equatable {
@@ -12,3 +13,4 @@ extension EdgeInsets: Equatable {
         return NSEdgeInsetsEqual(lhs, rhs)
     }
 }
+#endif

@@ -1,10 +1,10 @@
 /**
  *  Imagine Engine
  *  Copyright (c) John Sundell 2017
- *  Copyright (c) Guilherme Rambo 2017
  *  See LICENSE file for license
  */
 
+#if os(macOS)
 import Foundation
 import CoreVideo
 
@@ -48,3 +48,5 @@ private func _imageEngineDisplayLinkCallback(displayLink: CVDisplayLink,
     unsafeBitCast(displayLinkContext, to: DisplayLink.self).screenDidRender()
     return kCVReturnSuccess
 }
+#endif
+

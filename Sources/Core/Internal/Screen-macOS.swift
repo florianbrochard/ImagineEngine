@@ -1,10 +1,10 @@
 /**
- *  Imagine Engine
+ *  Screen
  *  Copyright (c) John Sundell 2017
- *  Copyright (c) Guilherme Rambo 2017
- *  See LICENSE file for license
+ *  Licensed under the MIT license. See LICENSE file.
  */
 
+#if os(macOS)
 import Cocoa
 
 internal extension Screen {
@@ -12,3 +12,4 @@ internal extension Screen {
         return Screen.main?.backingScaleFactor ?? 1
     }
 }
+#endif

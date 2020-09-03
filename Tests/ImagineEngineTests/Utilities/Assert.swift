@@ -17,7 +17,7 @@ import XCTest
  *  - parameter expression: The expression that should throw an error
  *  - parameter errorExpression: An expression resulting in an error that is expected to be thrown
  */
-public func assert<T, E: Error>(at file: StaticString = #file,
+public func assert<T, E: Error>(at file: StaticString = #filePath,
                                 line: UInt = #line,
                                 _ expression: @autoclosure () throws -> T,
                                 throwsError errorExpression: @autoclosure () -> E) where E: Equatable {
@@ -46,7 +46,7 @@ public func assert<T, E: Error>(at file: StaticString = #file,
  *  - parameter errorExpression: An expression resulting in an error that is expected to be thrown
  *  - closure: The closure that should thrown an error
  */
-public func assertErrorThrown<T, E: Error>(at file: StaticString = #file,
+public func assertErrorThrown<T, E: Error>(at file: StaticString = #filePath,
                                            line: UInt = #line,
                                            _ errorExpression: @autoclosure () -> E,
                                            by closure: () throws -> T) where E: Equatable {
@@ -62,7 +62,7 @@ public func assertErrorThrown<T, E: Error>(at file: StaticString = #file,
  *  - parameter line: The line number at which the assert should take place (automatically inferred)
  *  - parameter closure: The closure that shouldn't throw an error
  */
-public func assertNoErrorThrown<T>(at file: StaticString = #file, line: UInt = #line, from closure: () throws -> T) {
+public func assertNoErrorThrown<T>(at file: StaticString = #filePath, line: UInt = #line, from closure: () throws -> T) {
     do {
         _ = try closure()
     } catch {
@@ -80,7 +80,7 @@ public func assertNoErrorThrown<T>(at file: StaticString = #file, line: UInt = #
  *  - parameter objectA: The first object to assert against
  *  - parameter objectB: The second object to assert against
  */
-public func assertSameInstance<T: AnyObject>(at file: StaticString = #file,
+public func assertSameInstance<T: AnyObject>(at file: StaticString = #filePath,
                                              line: UInt = #line,
                                              _ objectA: T?,
                                              _ objectB: T?) {

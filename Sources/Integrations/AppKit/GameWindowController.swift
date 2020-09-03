@@ -5,6 +5,7 @@
  *  See LICENSE file for license
  */
 
+#if os(macOS)
 import Cocoa
 
 /// Window controller that can be used to present & manage an Imagine Engine game
@@ -35,3 +36,4 @@ public class GameWindowController: NSWindowController {
         self.init(size: .zero, scene: nil)
     }
 }
+#endif

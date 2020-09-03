@@ -5,6 +5,7 @@
  *  See LICENSE file for license
  */
 
+#if os(macOS)
 import Cocoa
 
 internal extension Image {
@@ -22,3 +23,4 @@ internal extension Image {
         self.init(cgImage: cgImage, size: size)
     }
 }
+#endif

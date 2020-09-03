@@ -1,9 +1,10 @@
 /**
- *  Imagine Engine
+ *  DisplayLink
  *  Copyright (c) John Sundell 2017
- *  See LICENSE file for license
+ *  Licensed under the MIT license. See LICENSE file.
  */
 
+#if os(iOS) || os(tvOS)
 import Foundation
 import QuartzCore
 
@@ -19,7 +20,7 @@ internal final class DisplayLink: DisplayLinkProtocol {
         link.add(to: .main, forMode: .common)
     }
 
-    // MARK: - Private
+    // MARK: Private
 
     private func makeLink() -> CADisplayLink {
         return CADisplayLink(target: self, selector: #selector(screenDidRender))
@@ -29,3 +30,4 @@ internal final class DisplayLink: DisplayLinkProtocol {
         callback()
     }
 }
+#endif

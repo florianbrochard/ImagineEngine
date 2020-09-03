@@ -1,13 +1,13 @@
 /**
- *  Imagine Engine
+ *  Screen
  *  Copyright (c) John Sundell 2017
- *  See LICENSE file for license
+ *  Licensed under the MIT license. See LICENSE file.
  */
 
-import Foundation
-
+#if os(iOS) || os(tvOS)
 internal extension Screen {
     static var mainScreenScale: Metric {
         return main.scale
     }
 }
+#endif

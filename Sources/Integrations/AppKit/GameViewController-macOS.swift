@@ -5,6 +5,7 @@
  *  See LICENSE file for license
  */
 
+#if os(macOS)
 import Cocoa
 
 /**
@@ -103,3 +104,4 @@ public extension GameViewController {
         self.init(game: Game(size: size, scene: scene))
     }
 }
+#endif

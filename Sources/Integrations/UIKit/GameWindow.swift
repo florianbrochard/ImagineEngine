@@ -4,6 +4,7 @@
  *  See LICENSE file for license
  */
 
+#if os(iOS) || os(tvOS)
 import UIKit
 
 /// Window that can be used to present & manage an Imagine Engine game
@@ -26,3 +27,4 @@ public class GameWindow: UIWindow {
         rootViewController = viewController
     }
 }
+#endif
